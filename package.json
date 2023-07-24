@@ -6,7 +6,7 @@
     "preinstall": "npx only-allow pnpm",
     "start": "pnpm --stream -r start",
     "dev": "pnpm --parallel --stream -r run dev",
-    "build": "./.build",
+    "build": "cd prisma-dummy && pnpm build && cd ../contract && pnpm build && cd ../backend && pnpm build && cd ../frontend && pnpm build ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "studio": "pnpm exec prisma studio --schema='./prisma-dummy/schema.prisma' ",
     "migrate:dev": "pnpm exec prisma migrate dev --schema='./prisma-dummy/schema.prisma' ",
